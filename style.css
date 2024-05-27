@@ -72,7 +72,6 @@ header > ul {
 }
 
 main {
-    height: auto;
     text-align: center;
     font-weight: 1em;
 }
@@ -88,17 +87,17 @@ main p {
 main > h2 {
     display: block;
     margin-top: 40px;
-    background-image: url('https://cdn.pixabay.com/photo/2017/05/20/20/22/clouds-2329680_1280.jpg');
+    background-color: #0062FF;
     background-size: cover;
     background-position: 100%;
     background-attachment: fixed;
     color: white;
-    text-shadow: 4px 4px 4px black;
+    text-shadow: 2px 2px 2px black;
     padding: 20px 10px;
     margin: 30px auto;
-    width: 80%;
+    width: 72%;
     border-radius: 0px 10px 0px 10px;
-    font-size: 1,5em;
+    font-size: 1.5em;
     box-shadow: 2px 2px 2px black;
 
     
@@ -139,6 +138,7 @@ section > p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: none;
     font-size: 0.8em;
+    transition: all 1s;
 }
 
 .componentes {
@@ -154,6 +154,7 @@ section > p {
     box-shadow: 5px 5px 10px black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 0.9em;
+    transition: all 1s;
 }
 
 .city {
@@ -167,6 +168,7 @@ section > p {
     margin: 30px auto;
     border-radius: 9px;
     box-shadow: 5px 5px 10px black;
+    transition: all 1s;
 }
 
 footer {
