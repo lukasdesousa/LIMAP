@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Tac One
+- Font Author: Copyright 2024 The Tac One Project Authors (https://github.com/Afrotype/tac)
+- Font Source: https://fonts.gstatic.com/s/tacone/v4/ahcZv8Cj3zw7qDr8fO4hU-FwnU0.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
