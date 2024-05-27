@@ -7,9 +7,9 @@ let cityTemp = document.querySelector('.city')
 
 let apitempo = 'https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}'
 
-let apicordenada = 'http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}'
+let apicordenada = 'https://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}'
 
-let apipolui = 'http://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={API key}'
+let apipolui = 'https://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={API key}'
 
 let apikey = '5489eb647ab61a33e53ebd5e2524bea8'
 
@@ -29,13 +29,13 @@ async function buscarCidade(cidade) {
 }
 
 async function cidadeCordenada(cidade, dados) {
-    let cidadeCord = await fetch('http://api.openweathermap.org/geo/1.0/direct?q=' + cidade + '&limit=1&appid=5489eb647ab61a33e53ebd5e2524bea8').then((resposta) => resposta.json())
+    let cidadeCord = await fetch('https://api.openweathermap.org/geo/1.0/direct?q=' + cidade + '&limit=1&appid=5489eb647ab61a33e53ebd5e2524bea8').then((resposta) => resposta.json())
 
     pol(cidadeCord, dados)
 }
 
 async function pol(cidadeCord, dados) {
-    let poluicao = await fetch('http://api.openweathermap.org/data/2.5/air_pollution?lat=' + cidadeCord[0].lat + '&lon=' + cidadeCord[0].lon + "&appid=5489eb647ab61a33e53ebd5e2524bea8").then((resposta) => resposta.json())
+    let poluicao = await fetch('https://api.openweathermap.org/data/2.5/air_pollution?lat=' + cidadeCord[0].lat + '&lon=' + cidadeCord[0].lon + "&appid=5489eb647ab61a33e53ebd5e2524bea8").then((resposta) => resposta.json())
 
     colocarnaTela(poluicao, dados)
 }
