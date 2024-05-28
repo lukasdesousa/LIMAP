@@ -62,7 +62,7 @@ function colocarnaTela(poluicao, dados) {
 
 
     } else if (poluicao.list[0].main.aqi == 2) {
-        document.querySelector('#resultado').innerHTML = '<h2>A qualidade do ar em </h2>' + '<h2>' + dados.name.toUpperCase() + ', ' + dados.sys.country + '.' + '</h2>' + '<br>' + '<br>' + '<h2> ESTÁ BOA. </h2>' + '<h2>"AQI (Air Quality Index) de nível 2"</h2>' + "<h2>Há uma quantidade de componentes relativamente baixa.<br>BOM para grupos sensíveis</h2>"
+        document.querySelector('#resultado').innerHTML = '<h2>Qualidade do ar em </h2>' + '<h2>' + dados.name.toUpperCase() + ', ' + dados.sys.country + '.' + '</h2>' + '<br>' + '<br>' + '<h2>BOA. </h2>' + '<h2>"AQI (Air Quality Index) de nível 2"</h2>' + "<h2>Há uma quantidade de componentes relativamente baixa.<br>BOM para grupos sensíveis</h2>"
 
         document.querySelector('#resultado').style.display = 'block'
 
@@ -81,7 +81,7 @@ function colocarnaTela(poluicao, dados) {
         components.style.background = 'yellow'
 
     } else if (poluicao.list[0].main.aqi == 4) {
-        document.querySelector('#resultado').innerHTML = '<h2>A qualidade do ar em </h2>' + '<h2>' + dados.name.toUpperCase() + ', ' + dados.sys.country + '.' + '</h2>' + '<br>' + '<br>' + '<h2> ESTÁ RUIM. </h2>' + '<h2>"AQI (Air Quality Index) de nível 4"</h2>' + "<h2>Há componentes com quantidades elevadas que possam fazer mal.<br>RUIM para grupos sensíveis</h2>"
+        document.querySelector('#resultado').innerHTML = '<h2>Qualidade do ar em </h2>' + '<h2>' + dados.name.toUpperCase() + ', ' + dados.sys.country + '.' + '</h2>' + '<br>' + '<br>' + '<h2>RUIM. </h2>' + '<h2>"AQI (Air Quality Index) de nível 4"</h2>' + "<h2>Há componentes com quantidades elevadas que possam fazer mal.<br>RUIM para grupos sensíveis</h2>"
 
         document.querySelector('#resultado').style.display = 'block'
 
@@ -91,7 +91,7 @@ function colocarnaTela(poluicao, dados) {
         components.style.background = 'orange'
 
     } else if (poluicao.list[0].main.aqi == 5) {
-        document.querySelector('#resultado').innerHTML = '<h2>A qualidade do ar em </h2>' + '<h2>' + dados.name.toUpperCase() + ', ' + dados.sys.country + '.' + '</h2>' + '<br>' + '<br>' + '<h2> ESTÁ MUITO RUIM. </h2>' + '<h2>"AQI (Air Quality Index) de nível 5"</h2>' + "<h2>Há componentes com quantidades muito elevadas.<br>MUITO RUIM para grupos sensíveis</h2>"
+        document.querySelector('#resultado').innerHTML = '<h2>Qualidade do ar em </h2>' + '<h2>' + dados.name.toUpperCase() + ', ' + dados.sys.country + '.' + '</h2>' + '<br>' + '<br>' + '<h2>MUITO RUIM. </h2>' + '<h2>"AQI (Air Quality Index) de nível 5"</h2>' + "<h2>Há componentes com quantidades muito elevadas.<br>MUITO RUIM para grupos sensíveis</h2>"
 
         document.querySelector('#imagens').innerHTML = '<img src="https://www.flaticon.com/br/icone-gratis/enjoado_11269963" alt="Emojis">'
 
