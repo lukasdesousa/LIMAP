@@ -11,17 +11,38 @@ botao.addEventListener('click', clique)
 
 function clique() {
     let cidade = document.querySelector('#cidade').value
-    
-    buscarCidade(cidade)
+
+    if (cidade == '') {
+
+        document.querySelector('.error').innerHTML = 'Insira uma cidade'
+
+    } else {
+        buscarCidade(cidade)
+        document.querySelector('.error').innerHTML = ''
+
+    }
 }
 
 // Busca dados do tempo de uma cidade
 
 async function buscarCidade(cidade) {
-    let dados = await fetch("https://api.openweathermap.org/data/2.5/weather?q=" +
-        cidade + '&appid=1e837bffae2c9a236779be07d19b1150&units=metric').then((resposta) => resposta.json())
+    let resposta = await fetch("https://api.openweathermap.org/data/2.5/weather?q=" +
+        cidade + '&appid=1e837bffae2c9a236779be07d19b1150&units=metric');
+    let dados = await resposta.json();
 
-    cidadeCordenada(cidade, dados)
+    if (resposta.ok) {
+        cidadeCordenada(cidade, dados)
+    } else {
+        document.querySelector('#resultado').style.display = 'block'
+        document.querySelector('#resultado').innerHTML = '<h2>Não foi possível encontrar a cidade :(<br><br> Tente procurar em inglês, exemp: Japan, ou procure por outra cidade.</h2>'
+        document.querySelector('.componentes').style.display = 'none'
+        document.querySelector('#imagens').innerHTML = '<img src="https://cdn-icons-png.flaticon.com/128/166/166527.png" alt="Emojis">'
+        document.querySelector('.nomeCidade').innerHTML = 'Informações do CLIMA aparecerão aqui.'
+        document.querySelector('.temperatura').innerHTML = ''
+        document.querySelector('.umidade').innerHTML = ''
+        document.querySelector('.vento').innerHTML = ''
+
+    }
 
 }
 
@@ -52,11 +73,11 @@ function colocarnaTela(poluicao, dados) {
     if (poluicao.list[0].main.aqi == 1) {
         document.querySelector('#resultado').innerHTML = '<h2>Qualidade do ar em </h2>' + '<h2>' + dados.name.toUpperCase() + ', ' + dados.sys.country + '.' + '</h2>' + '<br>' + '<br>' + '<h2>MUITO BOA. </h2>' + '<h2>"AQI (Air Quality Index) de nível 1" </h2>' + "<h2>Não há uma quantidade de componentes que possam fazer mal.<br>MUITO BOM para grupos sensíveis</h2>"
 
-        
+
         document.querySelector('#resultado').style.display = 'block'
 
         document.querySelector('#imagens').innerHTML = '<img src="https://cdn-icons-png.flaticon.com/128/6637/6637188.png" alt="Emojis">'
-        
+
         components.style.display = 'block'
         components.style.background = 'yellowgreen'
 
@@ -100,6 +121,8 @@ function colocarnaTela(poluicao, dados) {
         components.style.display = 'block'
         components.style.background = 'red'
 
+    } else if (dados == true) {
+        console.log('Acertou')
     }
 
     tempo(dados)
