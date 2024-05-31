@@ -16,18 +16,14 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-attachment: fixed;
-    height: 100vh;
+    height: 100%;
 }
 
 header {
     text-align: center;
-    padding: 50px 10px 25px 10px;
+    padding: 30px 10px 25px 10px;
     margin-top: -4px;
-    background-image: url('https://cdn.pixabay.com/photo/2017/05/20/20/22/clouds-2329680_1280.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right;
-    background-attachment: fixed;
+    background-image: linear-gradient(to top, #002759, #0062FF);
     color: white;
     font-size: 1em;
     transition: 1s;
@@ -41,16 +37,16 @@ header>h1 {
 }
 
 header>p {
-    display: block;
     margin: auto;
     text-shadow: 2px 2px 2px black;
     font-family: josefin sans, arial, sans-serif;
     font-size: 1.5em;
+    text-align: center;
     margin-top: 9px;
     background-color: rgba(44, 117, 234, 0.636);
     padding: 10px;
     border-radius: 10px 0px 10px 0px;
-    width: 350px;
+    width: 320px;
 }
 
 header>ul {
@@ -89,7 +85,7 @@ main p {
     margin: 10px;
     font-weight: bold;
     margin: 20px 0px 20px 0px;
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
@@ -112,12 +108,12 @@ main>h2 {
 
 #cidade {
     width: 100px;
-    padding: 10px;
+    padding: 10.1px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 12px;
-
+    border: 2px solid black;
 
 }
 
@@ -157,7 +153,7 @@ main>h2 {
 }
 
 .componentes {
-    display: none;
+    display: block;
     background-color: orange;
     color: white;
     text-shadow: 2px 2px 2px black;
@@ -170,6 +166,11 @@ main>h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 0.9em;
     transition: all 1s;
+}
+
+.nitrogen {
+    margin-top: 20px;
+    width: 80px;
 }
 
 .city {
@@ -186,6 +187,11 @@ main>h2 {
     transition: all 1s;
 }
 
+.icone {
+    width: 80px;
+    margin-top: 20px;
+}
+
 footer {
     display: block;
     background-color: rgb(0, 98, 255);
@@ -193,14 +199,13 @@ footer {
     text-align: center;
     padding: 10px;
     color: white;
-    margin: 53px 0px 0px 0px;
-  
+
 }
 
 .weatherIcon {
     width: 100px;
     max-width: 100px;
-    padding: 10px;
+    margin-top: 5px;
 }
 
 .open {
@@ -212,5 +217,3 @@ footer {
     text-decoration: underline;
     color: rgb(255, 255, 255);
 }
-
-
