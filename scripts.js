@@ -115,7 +115,7 @@ function colocarnaTela(poluicao, dados) {
     } else if (poluicao.list[0].main.aqi == 5) {
         document.querySelector('#resultado').innerHTML = '<h2>Qualidade do ar em </h2>' + '<h2>' + dados.name.toUpperCase() + ', ' + dados.sys.country + '.' + '</h2>' + '<br>' + '<br>' + '<h2>MUITO RUIM. </h2>' + '<h2>"AQI (Air Quality Index) de nível 5"</h2>' + "<h2>Há componentes com quantidades muito elevadas.<br><br>MUITO RUIM para grupos sensíveis</h2>"
 
-        document.querySelector('#imagens').innerHTML = '<img src="https://www.flaticon.com/br/icone-gratis/enjoado_11269963" alt="Emojis">'
+        document.querySelector('#imagens').innerHTML = '<img src="https://cdn-icons-png.flaticon.com/128/11269/11269963.png" alt="Emojis">'
 
         document.querySelector('#resultado').style.display = 'block'
 
