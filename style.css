@@ -23,7 +23,7 @@ header {
     text-align: center;
     padding: 30px 10px 25px 10px;
     margin-top: -4px;
-    background-image: linear-gradient(to top, #002759, #0062FF);
+    background-color: #002351;
     color: white;
     font-size: 1em;
     transition: 1s;
@@ -61,14 +61,14 @@ header>ul {
     color: white;
     display: flex;
     float: left;
-    padding: 15px 20px 14.5px 20px;
-    background-color: #002351;
+    padding: 14.5px 20px 14.5px 20px;
+    background-color:#013A83;
     font-family: fjalla one, arial, sans-serif;
     transition: all 1s;
 }
 
 .menu:hover {
-    background-color: #013a83;
+    background-color: #EB6E4B;
     text-shadow: 2px 2px black;
 }
 
@@ -192,7 +192,7 @@ main>h2 {
     margin-top: 20px;
 }
 
-footer {
+#cabecalho {
     background-color: rgb(0, 98, 255);
     font-size: 0.5em;
     text-align: center;
