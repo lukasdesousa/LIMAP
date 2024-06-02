@@ -40,7 +40,7 @@ header>p {
     margin: auto;
     text-shadow: 2px 2px 2px black;
     font-family: josefin sans, arial, sans-serif;
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-align: center;
     margin-top: 9px;
     background-color: rgba(44, 117, 234, 0.636);
@@ -53,27 +53,6 @@ header>ul {
     list-style: none;
     padding: 20px 10px 24px 10px;
     margin-left: -1.3em;
-}
-
-
-.menu {
-    text-decoration: none;
-    color: white;
-    display: flex;
-    float: left;
-    padding: 14.5px 20px 14.5px 20px;
-    background-color:#013A83;
-    font-family: fjalla one, arial, sans-serif;
-    transition: all 1s;
-}
-
-.menu:hover {
-    background-color: #EB6E4B;
-    text-shadow: 2px 2px black;
-}
-
-#radius {
-    border-radius: 0px 10px 0px 0px;
 }
 
 main {
@@ -194,7 +173,7 @@ main>h2 {
 
 #cabecalho {
     background-color: rgb(0, 98, 255);
-    font-size: 0.5em;
+    font-size: 10px;
     text-align: center;
     padding: 11px;
     color: white;
@@ -215,4 +194,17 @@ main>h2 {
 .open:hover {
     text-decoration: underline;
     color: rgb(255, 255, 255);
+}
+
+.artigo > h2 {
+    background-color: rgb(220, 220, 220);
+    padding: 10px;
+    width: 250px;
+    border-radius: 0px 10px 10px 0px;
+    text-align: left;
+    font-size: 1em;
+}
+
+.artigo > aside {
+    display: none;
 }
