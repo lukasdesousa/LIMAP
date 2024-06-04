@@ -289,9 +289,6 @@ footer>ul>li>a {
 }
 
 .limapfooter > a {
-    position: relative;
-    left: -15px;
    text-decoration: none;
    color: white;
-    
 }
