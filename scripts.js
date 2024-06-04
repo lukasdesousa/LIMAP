@@ -68,7 +68,7 @@ async function pol(cidadeCord, dados) {
 
 function colocarnaTela(poluicao, dados) {
     let components = document.querySelector('.componentes')
-    components.innerHTML = '<h2>COMPONENTES NO AR: </h2><br>' + '<h2>Monóxido de Carbono (CO): </h2>' + '<h2>' + poluicao.list[0].components.co + '</h2>' + '<h3>µg/m³</h3>' + '<br><br>' + '<h3><a style="color: white; text-shadow: 2p 2px 2px black;" href="https://brasilescola.uol.com.br/quimica/monoxido-carbono.htm" target="_blank">O QUE É MONÓXIDO DE CARBONO?</a></h3>' + '<br>' + '<h2>Dióxido de Nitrogênio (NO): </h2>' + '<h2>' + poluicao.list[0].components.no + '<br>' + '</h2>' + '<h3>µg/m³</h3>' + '<br><br>' + '<h3><a style="color: white;" href="https://brasilescola.uol.com.br/quimica/nitrogenio.htm" target="_blank">O QUE É NITROGÊNIO?</a></h3>' + '<br>' + '<h2>Amônia (NH3):' + '</h2>' + '<h2>' + poluicao.list[0].components.nh3 + '</h2>' + '<h3>µg/m³</h3>' + '<br><br>' + '<h3><a style="color: white;" href="https://brasilescola.uol.com.br/quimica/amonia-nh3.htm" target="_blank">O QUE É AMÔNIA?</a></h3>' + '<br>' + '<h2>Ozônio (O3): </h2>' + '<h2>' + poluicao.list[0].components.o3 + '</h2>' + '<h3>µg/m³</h3>' + '<br><br>' + '<h3><a style="color: white;" href="https://brasilescola.uol.com.br/quimica/gas-ozonio.htm" target="_blank">O QUE É OZÔNIO?</a></h3>'
+    components.innerHTML = '<h2>COMPONENTES NO AR: </h2><br>' + '<h2>Monóxido de Carbono (CO): </h2>' + '<h2>' + poluicao.list[0].components.co + '</h2>' + '<h3>µg/m³</h3>' + '<br>' + '<h2>Dióxido de Nitrogênio (NO): </h2>' + '<h2>' + poluicao.list[0].components.no + 'µg/m³' + '</h2>' + '<h3>µg/m³</h3>' + '<br>' + '<h2>Amônia (NH3):' + '</h2>' + '<h2>' + poluicao.list[0].components.nh3 + '</h2>' + '<h3>µg/m³</h3><br>' + '<h2>Ozônio (O3): </h2>' + '<h2>' + poluicao.list[0].components.o3 + '</h2>' + '<h3>µg/m³</h3>' + '<br>'
 
 
     if (poluicao.list[0].main.aqi == 1) {
@@ -143,4 +143,39 @@ function tempo(dados) {
 
 
 // Clique na seção duvídas
+
+let comps1 = document.querySelector('.comps1').addEventListener('click', duvida1)
+
+function duvida1() {
+    const comps1 = document.querySelector('.comps1');
+    const dentro1 = document.querySelector('.dentro1')
+
+    if (dentro1.style.display === 'block') {
+        dentro1.style.display = 'none'
+    } else {
+        dentro1.style.display = 'block'
+    }
+}
+
+
+
+document.querySelector('.comps2').addEventListener('click', duvida2)
+
+function duvida2() {
+    document.querySelector('.dentro2').style.display = 'block'
+}
+
+document.querySelector('.comps3').addEventListener('click', duvida3)
+
+function duvida3() {
+    document.querySelector('.dentro3').style.display = 'block'
+}
+
+document.querySelector('.comps4').addEventListener('click', duvida4)
+
+function duvida4() {
+    document.querySelector('.dentro4').style.display = 'block'
+}
+
+
 

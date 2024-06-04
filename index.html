@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LIMAP (sistema de qualidade do ar)</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilos/style.css">
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3912537462625302"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
-        <h1><a style="text-decoration: none; color: white;"href="">LIMAP</a></h1>
+        <h1><a style="text-decoration: none; color: white;" href="">LIMAP</a></h1>
         <p>Sistema de Qualidade do Ar</p>
     </header>
     <main>
         <div id="cabecalho">
             <h1>Dados fornecidos em tempo REAL por <br>
-            <a href="https://openweathermap.org/" target="_blank"><img class="weatherIcon" src="https://openweathermap.org/themes/openweathermap/assets/img/logo_white_cropped.png" alt="openweathermap"></a>
-            </div>
+                <a href="https://openweathermap.org/" target="_blank"><img class="weatherIcon"
+                        src="https://openweathermap.org/themes/openweathermap/assets/img/logo_white_cropped.png"
+                        alt="openweathermap"></a>
+        </div>
         <p>Pensado para pessoas sensiveis ao ar.</p>
         <form method="get" autocomplete="on">
-        <label for="botao"><input type="text" name="" id="cidade" placeholder="Digite sua cidade"></label>
-        <input type="button" value="Buscar" id="botao">
+            <input type="text" name="" id="cidade" placeholder="Digite sua cidade" required>
+            <input type="button" value="Buscar" id="botao">
         </form>
         <div class="error">
         </div>
         <div id="resultado">
         </div>
         <div id="imagens">
-        
+
         </div>
         <div class="componentes">
             <h2>Os COMPONENTES do AR aparecerão aqui.</h2>
@@ -42,7 +46,105 @@
             <img class="icone" src='https://openweathermap.org/img/wn/04n.png' alt="icone">
             <h2 class="vento"></h2>
         </div>
+        <section onclick="duvida1()" class="comps1" id="comps">
+            <h2>O que é Monóxido de Carbono?</h2>
+        </section>
+        <section class="dentro1"  id="dentro">
+            <aside>
+                <p>O monóxido de carbono é um gás inodoro, incolor e tóxico. É produzido com base na queima de compostos
+                    de carbono, na presença de pouco oxigênio (queima incompleta).</p>
+                <p class="niveis1">Níveis de 100 a 700 µg/m³:<br>
+                    Estes níveis são geralmente considerados seguros para a qualidade do ar em áreas externas. Valores
+                    dentro deste intervalo são baixos e indicam que a qualidade do ar está dentro de um padrão seguro
+                    para a saúde pública.</p>
+                <p class="niveis2">Níveis acima de 800 µg/m³:<br>
+                    Estes níveis não são considerados seguros para a qualidade do ar em áreas externas. Valores acima
+                    deste intervalo podem indicar uma qualidade do ar inadequada, podendo representar um risco para a
+                    saúde pública, especialmente para populações sensíveis como crianças, idosos, e pessoas com
+                    condições respiratórias.
+                </p>
+            </aside>
+        </section>
+        <section class="comps2" id="comps">
+            <h2>O que é Dióxido de Nitrogênio?</h2>
+        </section>
+        <section class="dentro2" id="dentro">
+            <aside>
+                <p>O dióxido de nitrogênio (NO₂) é um gás marrom-avermelhado que faz parte da família dos óxidos de
+                    nitrogênio (NOx). Ele é formado principalmente pela queima de combustíveis, como os encontrados em
+                    veículos automotores, usinas elétricas e processos industriais. O NO₂ é um poluente atmosférico
+                    significativo e é conhecido por contribuir para a formação da poluição do ar, especialmente em áreas
+                    urbanas.</p>
+                <p class="niveis1">Níveis de 0 a 100 µg/m³:<br>
+                    Estes níveis são geralmente considerados seguros para a qualidade do ar em áreas externas. Valores
+                    dentro deste intervalo são baixos e indicam que a qualidade do ar está dentro de um padrão seguro
+                    para a saúde pública.</p>
+
+                <p class="niveis2">
+                    Níveis acima de 100 µg/m³:<br>
+                    Estes níveis não são considerados seguros para a qualidade do ar em áreas externas. Valores acima
+                    deste intervalo podem indicar uma qualidade do ar inadequada, podendo representar um risco para a
+                    saúde pública, especialmente para populações sensíveis como crianças, idosos, e pessoas com
+                    condições respiratórias
+                </p>
+            </aside>
+        </section>
+        <section class="comps3" id="comps" >
+            <h2>O que é Amônia?</h2>
+        </section>
+        <section class="dentro3" id="dentro">
+            <aside>
+                <p>"A amônia, de fórmula NH3, é um gás incolor, tóxico e de odor forte e desagradável. Apresenta
+                    geometria piramidal, além de ser o gás mais solúvel em água que se conhece, justamente pela formação
+                    de ligações de hidrogênio. É uma importante substância do ciclo global do nitrogênio."
+                </p>
+                <p class="niveis1">Níveis de 0 a 25 µg/m³:<br>
+                    Estes níveis são geralmente considerados seguros para a qualidade do ar em áreas externas.
+                    Valores dentro deste intervalo são baixos e indicam que a qualidade do ar está dentro de um padrão
+                    seguro para a saúde pública.
+                </p>
+                <p class="niveis2">
+                    Níveis acima de 25 µg/m³:<br>
+                    Estes níveis não são considerados seguros para a qualidade do ar em áreas externas. Valores
+                    acima deste intervalo podem indicar uma qualidade do ar inadequada, podendo representar um risco
+                    para a saúde pública, especialmente para populações sensíveis.
+                </p>
+            </aside>
+        </section>
+        <section class="comps4" id="comps">
+            <h2>O que é Ozônio?</h2>
+        </section>
+        <section class="dentro4" id="dentro">
+            <aside>
+                <p>"O ozônio, O3, é uma forma alotrópica do elemento químico oxigênio. Em condições ambiente,
+                    apresenta-se como um gás. É reconhecido pela sua alta reatividade, grande poder oxidante e
+                    desinfetante. É formado naturalmente em camadas superiores da atmosfera (estratosfera) após
+                    fotodecomposição de moléculas de gás oxigênio."
+
+                </p>
+                <P class="niveis1">
+                    Níveis de 0 a 100 µg/m³:<br>
+                    Estes níveis são geralmente considerados seguros para a qualidade do ar em áreas externas.
+                    Valores dentro deste intervalo são baixos e indicam que a qualidade do ar está dentro de um padrão
+                    seguro para a saúde pública.
+                </P>
+                <p class="niveis2">
+                    Níveis acima de 100 µg/m³:<br>
+                    Estes níveis não são considerados seguros para a qualidade do ar em áreas externas. Valores
+                    acima deste intervalo podem indicar uma qualidade do ar inadequada, podendo representar um risco
+                    para a saúde pública, especialmente para populações sensíveis.
+                </p>
+            </aside>
+        </section>
     </main>
+    <footer>
+        <ul>
+            <li><a href="dados.html">Proteção de Dados</a></li>
+            <li><a href="privacidade.html">Privacidade</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </footer>
     <script src="scripts.js"></script>
 </body>
+
 </html>

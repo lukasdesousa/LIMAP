@@ -186,25 +186,77 @@ main>h2 {
     margin-top: 5px;
 }
 
-.open {
-    text-decoration: none;
+#comps {
+    background-color: rgb(205, 205, 205);
+    padding: 20px;
+    margin: 15px auto 20px auto;
+    width: 60%;
+   border-radius: 0px 10px 0px 10px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   cursor: pointer;
+   transition: 0.5s;
+}
+
+#dentro {
+    margin: 15px auto 15px auto;
+    background-color: #0062FF;
     color: white;
-}
-
-.open:hover {
-    text-decoration: underline;
-    color: rgb(255, 255, 255);
-}
-
-.artigo > h2 {
-    background-color: rgb(220, 220, 220);
-    padding: 10px;
-    width: 250px;
-    border-radius: 0px 10px 10px 0px;
+    text-shadow:3px 2px 1px black;
+    padding: 13px;
+    width: 90%;
     text-align: left;
-    font-size: 1em;
+    border-radius: 10px;
+    display: none;
+    
 }
 
-.artigo > aside {
-    display: none;
+.niveis1 {
+    background-color: rgb(102, 170, 0);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.3em;
+    text-shadow: 3px 3px 1px black;
+}
+
+.niveis2 {
+    background-color: rgb(216, 141, 2);
+    padding: 10px;
+    border-radius: 10px 0px 10px 10px;
+    text-shadow: 3px 3px 1px black;
+}
+
+#comps:hover {
+    background-color: #0062FF;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+#camps:active {
+    background-color: #0062FF;
+    color: white;
+    text-shadow: 2px 2px 2px black
+}
+
+footer {
+    background-color: #0062FF;
+    border-top: 3px solid #002351;
+    padding: 20px;
+}
+
+footer > ul {
+    display: flex;
+    margin: 10px;
+    list-style: none;
+    margin: 0px auto 0px -10px;
+
+}
+
+footer > ul > li>  a {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-shadow: 2px 2px 2px black;
+    padding: 10px;
+    list-style: none;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
