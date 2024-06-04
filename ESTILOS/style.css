@@ -1,22 +1,25 @@
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&display=swap');
-
-
 
 * {
     margin: 0;
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
     background-attachment: fixed;
-    height: 100%;
 }
 
 header {
@@ -27,19 +30,18 @@ header {
     color: white;
     font-size: 1em;
     transition: 1s;
-
 }
 
-header>h1 {
+header > h1 {
     text-shadow: 2px 2px 2px black;
-    font-family: fjalla one, arial, sans-serif;
+    font-family: 'Fjalla One', Arial, sans-serif;
     font-size: 3em;
 }
 
-header>p {
+header > p {
     margin: auto;
     text-shadow: 2px 2px 2px black;
-    font-family: josefin sans, arial, sans-serif;
+    font-family: 'Josefin Sans', Arial, sans-serif;
     font-size: 1.2em;
     text-align: center;
     margin-top: 9px;
@@ -49,13 +51,14 @@ header>p {
     width: 320px;
 }
 
-header>ul {
+header > ul {
     list-style: none;
     padding: 20px 10px 24px 10px;
     margin-left: -1.3em;
 }
 
 main {
+    flex: 1;
     text-align: center;
     font-weight: 1em;
 }
@@ -65,10 +68,10 @@ main p {
     font-weight: bold;
     margin: 20px 0px 20px 0px;
     font-size: 1.4em;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-main>h2 {
+main > h2 {
     display: block;
     background-color: #0062FF;
     color: white;
@@ -80,10 +83,7 @@ main>h2 {
     border-radius: 9px;
     box-shadow: 5px 5px 10px black;
     transition: all 1s;
-
-
 }
-
 
 #cidade {
     width: 100px;
@@ -93,7 +93,6 @@ main>h2 {
     font-weight: bold;
     font-size: 12px;
     border: 2px solid black;
-
 }
 
 #botao {
@@ -179,7 +178,6 @@ main>h2 {
     color: white;
     text-shadow: 2px 2px 2px black;
     border-bottom: 4px solid #002351;
-
 }
 
 .weatherIcon {
@@ -209,7 +207,6 @@ main>h2 {
     text-align: left;
     border-radius: 10px;
     display: none;
-
 }
 
 .niveis1 {
@@ -242,7 +239,6 @@ main>h2 {
 .botao:hover {
     box-shadow: 2px 2px 10px black;
     transform: translate(-5%, -5%);
-
 }
 
 #comps:hover {
@@ -254,13 +250,14 @@ main>h2 {
 #camps:active {
     background-color: #0062FF;
     color: white;
-    text-shadow: 2px 2px 2px black
+    text-shadow: 2px 2px 2px black;
 }
 
 footer {
     background-color: #0062FF;
     border-top: 3px solid #002351;
     padding: 20px;
+    margin-top: auto;
 }
 
 footer>ul {
@@ -268,7 +265,6 @@ footer>ul {
     margin: 10px;
     list-style: none;
     margin: 0px auto 0px -10px;
-
 }
 
 footer>ul>li>a {
@@ -278,20 +274,23 @@ footer>ul>li>a {
     text-shadow: 2px 2px 2px black;
     padding: 10px;
     list-style: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
 }
 
 .limapfooter {
     text-align: right;
-    font-size: 1.5em;
-    font-family: fjalla one, arial, sans-serif;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
     color: white;
     text-shadow: 2px 2px 2px black;
-    margin-top: -23px;
+    margin-top: -20px;
     
 }
 
 .limapfooter > a {
+    position: relative;
+    left: -15px;
    text-decoration: none;
    color: white;
     

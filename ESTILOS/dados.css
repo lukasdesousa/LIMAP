@@ -1,22 +1,26 @@
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&display=swap');
-
-
 
 * {
     margin: 0;
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-attachment: fixed;
-    height: 100%;
+    flex: 1;
 }
 
 header {
@@ -27,19 +31,18 @@ header {
     color: white;
     font-size: 1em;
     transition: 1s;
-
 }
 
-header>h1 {
+header > h1 {
     text-shadow: 2px 2px 2px black;
-    font-family: fjalla one, arial, sans-serif;
+    font-family: 'Fjalla One', Arial, sans-serif;
     font-size: 3em;
 }
 
-header>p {
+header > p {
     margin: auto;
     text-shadow: 2px 2px 2px black;
-    font-family: josefin sans, arial, sans-serif;
+    font-family: 'Josefin Sans', Arial, sans-serif;
     font-size: 1em;
     text-align: center;
     margin-top: 9px;
@@ -50,6 +53,7 @@ header>p {
 }
 
 main {
+    flex: 1;
     text-align: center;
     font-weight: 1em;
 }
@@ -59,9 +63,8 @@ main p {
     font-weight: bold;
     margin: 30px 0px 20px 0px;
     font-size: 1.4em;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
 
 #cidade {
     width: 100px;
@@ -71,7 +74,6 @@ main p {
     font-weight: bold;
     font-size: 12px;
     border: 2px solid black;
-
 }
 
 .city {
@@ -97,7 +99,6 @@ main p {
     text-shadow: 2px 2px 2px black;
     border-bottom: 3.5px solid #002351;
     border-top: 3px solid #002351;
-
 }
 
 .p {
@@ -119,6 +120,7 @@ footer {
     background-color: #0062FF;
     border-top: 3px solid #002351;
     padding: 20px;
+    margin-top: auto;
 }
 
 footer>ul {
@@ -126,7 +128,6 @@ footer>ul {
     margin: 10px;
     list-style: none;
     margin: 0px auto 0px -10px;
-
 }
 
 footer>ul>li>a {
@@ -136,20 +137,23 @@ footer>ul>li>a {
     text-shadow: 2px 2px 2px black;
     padding: 10px;
     list-style: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
 }
 
 .limapfooter {
     text-align: right;
-    font-size: 1.5em;
-    font-family: fjalla one, arial, sans-serif;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
     color: white;
     text-shadow: 2px 2px 2px black;
-    margin-top: -23px;
+    margin-top: -20px;
     
 }
 
 .limapfooter > a {
+    position: relative;
+    left: -15px;
    text-decoration: none;
    color: white;
     
