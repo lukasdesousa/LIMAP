@@ -18,14 +18,14 @@
     </header>
     <main>
         <div id="cabecalho">
-            <h1>Dados fornecidos em tempo REAL por <br>
+            <h1>Dados fornecidos em tempo real por: <br>
                 <a href="https://openweathermap.org/" target="_blank"><img class="weatherIcon"
                         src="https://openweathermap.org/themes/openweathermap/assets/img/logo_white_cropped.png"
                         alt="openweathermap"></a>
         </div>
         <p>Pensado para pessoas sensiveis ao ar.</p>
         <form method="get" autocomplete="on">
-            <input type="text" name="" id="cidade" placeholder="Digite sua cidade" required>
+            <input type="text" name="" id="cidade" placeholder="Digite sua cidade" autocomplete="address-line1" required>
             <input type="button" value="Buscar" id="botao">
         </form>
         <div class="error">
@@ -37,7 +37,8 @@
         </div>
         <div class="componentes">
             <h2>Os COMPONENTES do AR aparecerão aqui.</h2>
-            <img class="nitrogen" src="https://cdn-icons-png.flaticon.com/512/341/341531.png" alt="NO2">
+            <img class="nitrogen" src="https://cdn-icons-png.flaticon.com/512/341/341531.png" alt="NO2"> <br>
+            <h3>Informações dos componentes estão logo abaixo</h3>
         </div>
         <div class="city">
             <h2 class="nomeCidade">Informações do CLIMA aparecerão aqui.</h2>
@@ -46,7 +47,7 @@
             <img class="icone" src='https://openweathermap.org/img/wn/04n.png' alt="icone">
             <h2 class="vento"></h2>
         </div>
-        <section onclick="duvida1()" class="comps1" id="comps">
+        <section class="comps1" id="comps">
             <h2>O que é Monóxido de Carbono?</h2>
         </section>
         <section class="dentro1"  id="dentro">
@@ -61,8 +62,9 @@
                     Estes níveis não são considerados seguros para a qualidade do ar em áreas externas. Valores acima
                     deste intervalo podem indicar uma qualidade do ar inadequada, podendo representar um risco para a
                     saúde pública, especialmente para populações sensíveis como crianças, idosos, e pessoas com
-                    condições respiratórias.
+                    condições respiratórias. <br>
                 </p>
+                <button type="button" id="botao1" class="botao">Fechar</button>
             </aside>
         </section>
         <section class="comps2" id="comps">
@@ -87,6 +89,7 @@
                     saúde pública, especialmente para populações sensíveis como crianças, idosos, e pessoas com
                     condições respiratórias
                 </p>
+                <button type="button" id="botao2" class="botao">Fechar</button>
             </aside>
         </section>
         <section class="comps3" id="comps" >
@@ -109,6 +112,7 @@
                     acima deste intervalo podem indicar uma qualidade do ar inadequada, podendo representar um risco
                     para a saúde pública, especialmente para populações sensíveis.
                 </p>
+                <button type="button" id="botao3" class="botao">Fechar</button>
             </aside>
         </section>
         <section class="comps4" id="comps">
@@ -134,6 +138,7 @@
                     acima deste intervalo podem indicar uma qualidade do ar inadequada, podendo representar um risco
                     para a saúde pública, especialmente para populações sensíveis.
                 </p>
+                <button type="button" id="botao4" class="botao">Fechar</button>
             </aside>
         </section>
     </main>
@@ -143,6 +148,7 @@
             <li><a href="privacidade.html">Privacidade</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul>
+        <h2 class="limapfooter"><a href="index.html">LIMAP</a></h2>
     </footer>
     <script src="scripts.js"></script>
 </body>

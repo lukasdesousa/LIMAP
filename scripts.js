@@ -1,17 +1,10 @@
-let botao = document.querySelector('#botao')
-let input = document.querySelector('#cidade')
-let resp = document.querySelector('#resposta')
-let cityTemp = document.querySelector('.city')
-
-
-botao.addEventListener('click', clique)
-
-
 // Pega o valor recebido no input
+botao.addEventListener('click', clique)
 
 function clique() {
     let cidade = document.querySelector('#cidade').value
 
+    // Verifica se o usuário inseriu algo
     if (cidade == '') {
 
         document.querySelector('.error').innerHTML = 'Insira uma cidade'
@@ -48,7 +41,7 @@ async function buscarCidade(cidade) {
 
 }
 
-// Pega as cordenadas de uma cidade pelo nome
+// Coleta as coordenadas de uma cidade pelo nome
 
 async function cidadeCordenada(cidade, dados) {
     let cidadeCord = await fetch('https://api.openweathermap.org/geo/1.0/direct?q=' + cidade + '&limit=1&appid=5489eb647ab61a33e53ebd5e2524bea8').then((resposta) => resposta.json())
@@ -56,7 +49,7 @@ async function cidadeCordenada(cidade, dados) {
     pol(cidadeCord, dados)
 }
 
-// Tranforma as cordenadas recebidas em dados de poluição do ar
+// Tranforma as cordenadas recebidas em dados de poluição do ar, através de busca.
 
 async function pol(cidadeCord, dados) {
     let poluicao = await fetch('https://api.openweathermap.org/data/2.5/air_pollution?lat=' + cidadeCord[0].lat + '&lon=' + cidadeCord[0].lon + "&appid=5489eb647ab61a33e53ebd5e2524bea8").then((resposta) => resposta.json())
@@ -127,6 +120,8 @@ function colocarnaTela(poluicao, dados) {
     tempo(dados)
 }
 
+// Dados na tela sobre o clima
+
 function tempo(dados) {
 
     document.querySelector('.nomeCidade').innerHTML = 'Tempo em ' + dados.name + '<br>' + '<br>'
@@ -142,22 +137,38 @@ function tempo(dados) {
 }
 
 
-// Clique na seção duvídas
+// Clique na seção duvídas (abre e fecha)
 
-let comps1 = document.querySelector('.comps1').addEventListener('click', duvida1)
 
-function duvida1() {
-    const comps1 = document.querySelector('.comps1');
-    const dentro1 = document.querySelector('.dentro1')
+document.querySelector('#botao1').addEventListener('click', fechar1)
 
-    if (dentro1.style.display === 'block') {
-        dentro1.style.display = 'none'
-    } else {
-        dentro1.style.display = 'block'
-    }
+function fechar1() {
+    document.querySelector('.dentro1').style.display = 'none'
 }
 
+document.querySelector('#botao2').addEventListener('click', fechar2)
 
+function fechar2() {
+    document.querySelector('.dentro2').style.display = 'none'
+}
+
+document.querySelector('#botao3').addEventListener('click', fechar3)
+
+function fechar3() {
+    document.querySelector('.dentro3').style.display = 'none'
+}
+
+document.querySelector('#botao4').addEventListener('click', fechar4)
+
+function fechar4() {
+    document.querySelector('.dentro4').style.display = 'none'
+}
+
+document.querySelector('.comps1').addEventListener('click', duvida1)
+
+function duvida1() {
+    document.querySelector('.dentro1').style.display = 'block'
+}
 
 document.querySelector('.comps2').addEventListener('click', duvida2)
 

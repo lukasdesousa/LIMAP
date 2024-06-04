@@ -93,9 +93,11 @@ main p {
 #cabecalho {
     background-color: rgb(0, 98, 255);
     font-size: 10px;
-    
+    text-align: center;
     padding: 11px;
     color: white;
+    text-shadow: 2px 2px 2px black;
+    border-bottom: 4px solid #002351;
 
 }
 
@@ -112,32 +114,45 @@ main p {
     border-radius: 0px 10px 0px 10px;
 }
 
-.link {
-    color: rgb(238, 238, 238);
-}
-
 footer {
-    background-color: rgb(217, 217, 217);
+    background-color: #0062FF;
     border-top: 3px solid #002351;
     padding: 20px;
-    position: relative;
-    top: 5%;
     
 }
 
-footer > ul {
+footer>ul {
     display: flex;
     margin: 10px;
     list-style: none;
-    margin: auto;
+    margin: 0px auto 0px -10px;
 
 }
 
-footer > ul > li>  a {
+footer>ul>li>a {
     text-align: center;
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
+    text-shadow: 2px 2px 2px black;
     padding: 10px;
     list-style: none;
-   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.limapfooter {
+    text-align: right;
+    font-size: 1.5em;
+    font-family: fjalla one, arial, sans-serif;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    margin-top: -23px;
+    
+}
+
+.limapfooter > a {
+    position: relative;
+    left: -15px;
+   text-decoration: none;
+   color: white;
+    
 }
