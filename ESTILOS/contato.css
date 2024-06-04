@@ -113,7 +113,7 @@ main p {
 
 footer {
     background-color: #0062FF;
-    border-top: 3px solid #002351;
+    border-top: 4px solid #002351;
     padding: 20px;
     margin-top: auto;
 }
@@ -137,7 +137,7 @@ footer>ul>li>a {
 }
 
 .limapfooter {
-    text-align: right;
+    text-align: left;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
