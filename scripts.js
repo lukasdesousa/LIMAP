@@ -136,3 +136,57 @@ function tempo(dados) {
 
 }
 
+// Clique na seção dúvida
+
+document.querySelector('.comps1').addEventListener('click', dentro1)
+
+function dentro1() {
+    document.querySelector('.dentro1').style.display = 'block'
+}
+
+document.querySelector('.comps2').addEventListener('click', dentro2)
+
+function dentro2() {
+    document.querySelector('.dentro2').style.display = 'block'
+}
+
+document.querySelector('.comps3').addEventListener('click', dentro3)
+
+function dentro3() {
+    document.querySelector('.dentro3').style.display = 'block'
+}
+
+document.querySelector('.comps4').addEventListener('click', dentro4)
+
+function dentro4() {
+    document.querySelector('.dentro4').style.display = 'block'
+}
+
+// Fechar menus
+
+document.querySelector('#botao1').addEventListener('click', fechar1)
+
+function fechar1() {
+    document.querySelector('.dentro1').style.display = 'none'
+}
+
+document.querySelector('#botao2').addEventListener('click', fechar2)
+
+function fechar2() {
+    document.querySelector('.dentro2').style.display = 'none'
+}
+
+document.querySelector('#botao3').addEventListener('click', fechar3)
+
+function fechar3() {
+    document.querySelector('.dentro3').style.display = 'none'
+}
+
+document.querySelector('#botao4').addEventListener('click', fechar4)
+
+function fechar4() {
+    document.querySelector('.dentro4').style.display = 'none'
+}
+
+
+

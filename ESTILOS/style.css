@@ -119,6 +119,27 @@ main > h2 {
     background-color: rgb(228, 226, 226);
 }
 
+.botao {
+    padding: 10px;
+    background-color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    box-shadow: 2px 2px 2px black;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+    
+}
+
+.botao:hover {
+    transform: translate(-2%, -5%);
+    box-shadow: 6px 6px 6px black;
+}
+
+
 .error {
     font-family: Arial, Helvetica, sans-serif;
     margin: 5px;
@@ -212,16 +233,17 @@ main > h2 {
 }
 
 #dentro {
-    font-size: 1em;
+    font-size: 0.8em;
     margin: 15px auto 15px auto;
     background-color: #0062FF;
     color: white;
-    text-shadow: 3px 2px 1px black;
+    text-shadow: 3px 2px 2px black;
     padding: 13px;
     width: 80%;
     text-align: left;
     border-radius: 10px;
     box-shadow: 2px 2px 2px black;
+    display: none;
 }
 
 #dentroaqi {
@@ -238,7 +260,7 @@ main > h2 {
 }
 
 .duvidas {
-    background-image: linear-gradient(to right, #002351, #0062FF);
+    background-color: #002351;
     color: white;
     text-shadow: 2px 2px 2px black;
     padding: 15px;
@@ -261,19 +283,32 @@ main > h2 {
     padding: 10px;
     border-radius: 5px;
     font-size: 1.3em;
-    text-shadow: 3px 3px 1px black;
+    text-shadow: 3px 1px 2px black;
 }
 
 .niveis2 {
     background-color: rgb(216, 141, 2);
     padding: 10px;
     border-radius: 10px 0px 10px 10px;
-    text-shadow: 3px 3px 1px black;
+    text-shadow: 3px 1px 2px black;
 }
 
 #comps:hover {
     transform: translate(-2%, -5%);
     box-shadow: 10px 10px 5px black;
+}
+
+#comps:active {
+    background-color: #0256de;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    padding: 20px;
+    margin: 15px auto 20px auto;
+    width: 50%;
+    border-radius: 0px 10px 0px 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 10px 10px 5px black;
+    transform: translate(-2%, -5%);
 }
 
 footer {
