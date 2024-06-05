@@ -18,25 +18,20 @@
     </header>
     <main>
         <div id="cabecalho">
-            <h1>Dados fornecidos em tempo real por: <br>
-                <a href="https://openweathermap.org/" target="_blank"><img class="weatherIcon"
-                        src="https://openweathermap.org/themes/openweathermap/assets/img/logo_white_cropped.png"
-                        alt="openweathermap"></a>
+            <h1>INFORMAÇÕES EM TEMPO REAL<br>
         </div>
-        <p>Pensado para pessoas sensiveis ao ar.</p>
-        <form method="get" autocomplete="on">
-            <input type="text" name="" id="cidade" placeholder="Digite sua cidade" autocomplete="address-line1" required>
+        <p class="textop">Verifique a qualidade do Ar de qualquer cidade ao redor do mundo</p>
+            <input type="text" name="" id="cidade" placeholder="Digite sua cidade">
             <input type="button" value="Buscar" id="botao">
-        </form>
         <div class="error">
         </div>
-        <div id="resultado">
+        <div id="resultado"> 
         </div>
         <div id="imagens">
 
         </div>
         <div class="componentes">
-            <h2>Os COMPONENTES do AR aparecerão aqui.</h2>
+            <h2>Os COMPONENTES no Ar aparecerão aqui.</h2>
             <img class="nitrogen" src="https://cdn-icons-png.flaticon.com/512/341/341531.png" alt="NO2"> <br>
             <h3>Informações dos componentes estão logo abaixo</h3>
         </div>
@@ -47,6 +42,7 @@
             <img class="icone" src='https://openweathermap.org/img/wn/04n.png' alt="icone">
             <h2 class="vento"></h2>
         </div>
+        <h3 class="duvidas">Dúvidas</h3>
         <section class="comps1" id="comps">
             <h2>O que é Monóxido de Carbono?</h2>
         </section>
@@ -64,7 +60,6 @@
                     saúde pública, especialmente para populações sensíveis como crianças, idosos, e pessoas com
                     condições respiratórias. <br>
                 </p>
-                <button type="button" id="botao1" class="botao">Fechar</button>
             </aside>
         </section>
         <section class="comps2" id="comps">
@@ -74,9 +69,7 @@
             <aside>
                 <p>O dióxido de nitrogênio (NO₂) é um gás marrom-avermelhado que faz parte da família dos óxidos de
                     nitrogênio (NOx). Ele é formado principalmente pela queima de combustíveis, como os encontrados em
-                    veículos automotores, usinas elétricas e processos industriais. O NO₂ é um poluente atmosférico
-                    significativo e é conhecido por contribuir para a formação da poluição do ar, especialmente em áreas
-                    urbanas.</p>
+                    veículos automotores, usinas elétricas e processos industriais.</p>
                 <p class="niveis1">Níveis de 0 a 100 µg/m³:<br>
                     Estes níveis são geralmente considerados seguros para a qualidade do ar em áreas externas. Valores
                     dentro deste intervalo são baixos e indicam que a qualidade do ar está dentro de um padrão seguro
@@ -89,7 +82,6 @@
                     saúde pública, especialmente para populações sensíveis como crianças, idosos, e pessoas com
                     condições respiratórias
                 </p>
-                <button type="button" id="botao2" class="botao">Fechar</button>
             </aside>
         </section>
         <section class="comps3" id="comps" >
@@ -97,9 +89,9 @@
         </section>
         <section class="dentro3" id="dentro">
             <aside>
-                <p>"A amônia, de fórmula NH3, é um gás incolor, tóxico e de odor forte e desagradável. Apresenta
+                <p>A amônia, de fórmula NH3, é um gás incolor, tóxico e de odor forte e desagradável. Apresenta
                     geometria piramidal, além de ser o gás mais solúvel em água que se conhece, justamente pela formação
-                    de ligações de hidrogênio. É uma importante substância do ciclo global do nitrogênio."
+                    de ligações de hidrogênio.
                 </p>
                 <p class="niveis1">Níveis de 0 a 25 µg/m³:<br>
                     Estes níveis são geralmente considerados seguros para a qualidade do ar em áreas externas.
@@ -112,7 +104,6 @@
                     acima deste intervalo podem indicar uma qualidade do ar inadequada, podendo representar um risco
                     para a saúde pública, especialmente para populações sensíveis.
                 </p>
-                <button type="button" id="botao3" class="botao">Fechar</button>
             </aside>
         </section>
         <section class="comps4" id="comps">
@@ -120,10 +111,9 @@
         </section>
         <section class="dentro4" id="dentro">
             <aside>
-                <p>"O ozônio, O3, é uma forma alotrópica do elemento químico oxigênio. Em condições ambiente,
+                <p>O ozônio, O3, é uma forma alotrópica do elemento químico oxigênio. Em condições ambiente,
                     apresenta-se como um gás. É reconhecido pela sua alta reatividade, grande poder oxidante e
-                    desinfetante. É formado naturalmente em camadas superiores da atmosfera (estratosfera) após
-                    fotodecomposição de moléculas de gás oxigênio."
+                    desinfetante.
 
                 </p>
                 <P class="niveis1">
@@ -138,8 +128,13 @@
                     acima deste intervalo podem indicar uma qualidade do ar inadequada, podendo representar um risco
                     para a saúde pública, especialmente para populações sensíveis.
                 </p>
-                <button type="button" id="botao4" class="botao">Fechar</button>
             </aside>
+        </section>
+        <h3 class="duvidas">Como será definido se o ar está bom ou ruim?</h3>
+        <section id="dentroaqi">
+        <aside>
+            <p>Nós utilizamos o modelo de AQI (Air Quality Index) ou índice de qualidade do ar. Neste modelo, o índice é baseado na quantidade de elementos presentes no ar, assim, indo de 1 a 5, sendo 1 = <span class="bom">MUITO BOM</span> e 5 = <span class="ruim">MUITO RUIM</span>.</p>
+        </aside>
         </section>
     </main>
     <footer>
@@ -148,7 +143,7 @@
             <li><a href="privacidade.html">Privacidade</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul><br><br>
-        <h2 class="limapfooter"><a href="index.html">&copy;LIMAP</a></h2>
+        <h2 class="limapfooter"><a href="https://limap.cloud">&copy;LIMAP</a></h2>
     </footer>
     <script src="scripts.js"></script>
 </body>
