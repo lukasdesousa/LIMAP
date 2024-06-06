@@ -239,7 +239,7 @@ main > h2 {
     color: white;
     text-shadow: 3px 2px 2px black;
     padding: 13px;
-    width: 80%;
+    width: 70%;
     text-align: left;
     border-radius: 10px;
     box-shadow: 2px 2px 2px black;
@@ -270,12 +270,14 @@ main > h2 {
 
 .bom {
     background-color: rgb(0, 182, 0);
-    padding: 2px 5px 2px 5px;
+    padding: 1px 3px 1px 3px;
+    margin: 10px;
 }
 
 .ruim {
     background-color: rgb(200, 40, 0);
-    padding: 2px 5px 2px 5px;
+    padding: 1px 3px 1px 3px;
+    margin: 5px;
 }
 
 .niveis1 {
