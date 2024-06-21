@@ -13,12 +13,16 @@
 
 <body>
     <header>
-        <h1><a style="text-decoration: none; color: white;" href="">LIMAP</a></h1>
-        <p>Sistema de Qualidade do Ar</p>
+        <h1><a href="">LIMAP</a></h1>
     </header>
     <main>
-        <div id="cabecalho">
-            <h1>INFORMAÇÕES EM TEMPO REAL<br>
+        <div id="container">
+            <div class="carrossel">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
         <p class="textop">Verifique a qualidade do ar de qualquer cidade ao redor do mundo com apenas alguns cliques</p>
             <input type="text" name="" id="cidade" placeholder="Digite sua cidade">
@@ -42,7 +46,13 @@
             <img class="icone" src='https://openweathermap.org/img/wn/04n.png' alt="icone">
             <h2 class="vento"></h2>
         </div>
-        <h3 class="duvidas">Dúvidas</h3>
+        
+        <div class="container2">
+            <div class="duvidas">
+                <img src="https://cdn-icons-png.flaticon.com/128/2577/2577567.png" alt="icon">
+                <h3>Dúvidas</h3>
+            </div>
+        </div>
         <section class="comps1" id="comps">
             <h2>O que é Monóxido de Carbono?</h2>
         </section>
@@ -134,7 +144,12 @@
                 <button type="button" class="botao" id="botao4">Fechar</button>
             </aside>
         </section>
-        <h3 class="duvidas">Como será definido se o ar está bom ou ruim?</h3>
+        <div class="container2">
+            <div class="duvida2">
+                <img src="https://cdn-icons-png.flaticon.com/128/5903/5903430.png" alt="icon">
+                <h3>Como medimos a qualidade do ar?</h3>
+            </div>
+        </div>
         <section id="dentroaqi">
         <aside>
             <p style="text-align: left; font-size: 1.1em">Nós utilizamos o modelo de AQI (Air Quality Index) ou índice de qualidade do ar. Neste modelo, o índice é baseado na quantidade de elementos presentes no ar, assim, indo de 1 a 5, sendo 1 = <span class="bom">MUITO BOM</span> e 5 = <span class="ruim">MUITO RUIM.</span></p>

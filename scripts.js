@@ -136,7 +136,9 @@ function tempo(dados) {
 
 }
 
-// Clique na seção dúvida
+// Clique em dúvidas
+
+let copita = document.createElement
 
 document.querySelector('.comps1').addEventListener('click', dentro1)
 

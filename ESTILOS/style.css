@@ -1,12 +1,14 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -24,43 +26,35 @@ body {
 
 header {
     text-align: center;
-    padding: 30px 10px 25px 10px;
-    margin-top: -4px;
-    background-color: #002351;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     font-size: 1em;
     transition: 1s;
-}
+    border-bottom: 2px solid black;
+    
 
-header > h1 {
-    text-shadow: 2px 2px 2px black;
-    font-family: 'Fjalla One', Arial, sans-serif;
-    font-size: 3em;
-}
+    & h1 {
+        text-align: left;
+        position: relative;
+        font-family: Righteous, Arial;
+        color: black;
+        padding: 20px;
 
-header > p {
-    margin: auto;
-    text-shadow: 2px 2px 2px black;
-    font-family: 'Josefin Sans', Arial, sans-serif;
-    font-size: 1.2em;
-    text-align: center;
-    margin-top: 9px;
-    background-color: rgba(44, 117, 234, 0.636);
-    padding: 10px;
-    border-radius: 10px 0px 10px 0px;
-    width: 320px;
-}
+        & a {
+            text-decoration: none;
+            color: inherit;
+        }
+    
+    }
 
-header > ul {
-    list-style: none;
-    padding: 20px 10px 24px 10px;
-    margin-left: -1.3em;
+    
 }
 
 main {
     flex: 1;
     text-align: center;
     font-weight: 1em;
+    font-family: poppins, Arial, Helvetica, sans-serif;
 }
 
 main p {
@@ -68,7 +62,7 @@ main p {
     font-weight: bold;
     margin: 20px 0px 20px 0px;
     font-size: 1.4em;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: poppins, Arial, Helvetica, sans-serif;
 }
 
 main > h2 {
@@ -101,7 +95,7 @@ main > h2 {
     width: 100px;
     padding: 10.1px;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: poppins, Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 12px;
     border: 2px solid black;
@@ -110,7 +104,7 @@ main > h2 {
 #botao {
     background-color: rgb(255, 255, 255);
     padding: 8.9px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: poppins, Arial, Helvetica, sans-serif;
     cursor: pointer;
     transition: 1s;
 }
@@ -122,7 +116,7 @@ main > h2 {
 .botao {
     padding: 10px;
     background-color: #ffffff;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: poppins, Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: rgb(0, 0, 0);
     box-shadow: 2px 2px 2px black;
@@ -141,7 +135,7 @@ main > h2 {
 
 
 .error {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: poppins, Arial, Helvetica, sans-serif;
     margin: 5px;
     font-size: 0.8em;
     color: red;
@@ -259,14 +253,50 @@ main > h2 {
     font-size: 16px;
 }
 
-.duvidas {
-    background-color: #002351;
-    color: white;
-    text-shadow: 2px 2px 2px black;
+.container2 {
+    height: 100px;
+    overflow: hidden;
+    background-color: #ffffff;
+    color: rgb(4, 4, 4);
     padding: 15px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: poppins, Arial, Helvetica, sans-serif;
     font-size: 1.2em;
+    border: 2px solid black;
+    width: 100%;
 }
+
+.duvidas {
+    position: relative;
+    bottom: 54px;
+
+    & img {
+        width: 80px;
+        position: relative;
+        top: 58px;
+        right: 100px;
+    }
+
+}
+
+.duvida2 {
+    position: relative;
+    bottom: 80px;
+
+    & h3 {
+        font-size: 20px;
+        position: relative;
+        top: 40px;
+    }
+
+    & img {
+        width: 80px;
+        position: relative;
+        display: block;
+        margin: auto;
+        top: 55px;
+    }
+}
+
 
 .bom {
     color: greenyellow;
@@ -304,7 +334,7 @@ main > h2 {
     margin: 15px auto 20px auto;
     width: 50%;
     border-radius: 0px 10px 0px 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: poppins, Arial, Helvetica, sans-serif;
     box-shadow: 10px 10px 5px black;
     transform: translate(-2%, -5%);
 }
@@ -330,7 +360,7 @@ footer>ul>li>a {
     text-shadow: 2px 2px 2px black;
     padding: 10px;
     list-style: none;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: poppins, Arial, Helvetica, sans-serif;
     font-size: 15px;
 }
 
@@ -338,7 +368,7 @@ footer>ul>li>a {
     text-align: left;
     float: left;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: poppins, Arial, Helvetica, sans-serif;
     color: white;
     text-shadow: 2px 2px 2px black;
     margin-top: -20px;
