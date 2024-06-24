@@ -130,7 +130,7 @@ function tempo(dados) {
 
     document.querySelector('.umidade').innerHTML = 'Umidade de ' + dados.main.humidity + '%' + '<br>'
 
-    document.querySelector('.icone').src = 'https://openweathermap.org/img/wn/' + dados.weather[0].icon + '.png'
+    document.querySelector('.icone').src = 'https://cdn-icons-png.flaticon.com/128/5903/5903939.png'
 
     document.querySelector('.vento').innerHTML = 'Velocidade do vento de: ' + dados.wind.speed + 'm/s (Metros por segundo)'
 
