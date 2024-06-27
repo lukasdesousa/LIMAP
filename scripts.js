@@ -1,20 +1,21 @@
 // Pega o valor recebido no input
+let botao = document.querySelector('#botao')
+let loading = document.querySelector('.loading')
+
 botao.addEventListener('click', clique)
 
 function clique() {
     let cidade = document.querySelector('#cidade').value
-
     // Verifica se o usuário inseriu algo
     if (cidade == '') {
-
         document.querySelector('.error').innerHTML = 'Insira uma cidade'
         document.querySelector('#cidade').style.border = '2px solid red'
-
+        
     } else {
         buscarCidade(cidade)
         document.querySelector('.error').innerHTML = ''
         document.querySelector('#cidade').style.border = ''
-
+        loading.style.display = 'block'
     }
 }
 
@@ -26,17 +27,15 @@ async function buscarCidade(cidade) {
     let dados = await resposta.json();
 
     if (resposta.ok) {
+        loading.style.display = 'none'
         cidadeCordenada(cidade, dados)
     } else {
         document.querySelector('#resultado').style.display = 'block'
         document.querySelector('#resultado').innerHTML = '<h2>Não foi possível encontrar a cidade :(<br><br> Tente procurar em inglês, exemp: Japan, ou procure por outra cidade.</h2>'
         document.querySelector('.componentes').style.display = 'none'
-        document.querySelector('#imagens').innerHTML = '<img src="https://cdn-icons-png.flaticon.com/128/166/166527.png" alt="Emojis">'
-        document.querySelector('.nomeCidade').innerHTML = 'Informações do CLIMA aparecerão aqui.'
-        document.querySelector('.temperatura').innerHTML = ''
-        document.querySelector('.umidade').innerHTML = ''
-        document.querySelector('.vento').innerHTML = ''
-
+        document.querySelector('#imagens').innerHTML = '<img src="https://cdn-icons-png.flaticon.com/128/2665/2665044.png" alt="Emojis">'
+        loading.style.display = 'none'
+        document.querySelector('.city').style.display = 'none'
     }
 
 }
@@ -129,16 +128,16 @@ function tempo(dados) {
     document.querySelector('.temperatura').innerHTML = Math.floor(dados.main.temp) + 'ºC' + '<br>' + '<br>'
 
     document.querySelector('.umidade').innerHTML = 'Umidade de ' + dados.main.humidity + '%' + '<br>'
+    
 
     document.querySelector('.icone').src = 'https://cdn-icons-png.flaticon.com/128/5903/5903939.png'
 
-    document.querySelector('.vento').innerHTML = 'Velocidade do vento de: ' + dados.wind.speed + 'm/s (Metros por segundo)'
+    document.querySelector('.vento').innerHTML = '<br>Velocidade do vento de: ' + dados.wind.speed + 'm/s (Metros por segundo)'
 
 }
 
 // Clique em dúvidas
 
-let copita = document.createElement
 
 document.querySelector('.comps1').addEventListener('click', dentro1)
 
