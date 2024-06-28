@@ -30,7 +30,7 @@ header {
     text-align: center;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
-    font-size: 20px;
+    font-size: 19px;
     border-bottom: 2px solid black;
 
 
@@ -93,9 +93,9 @@ main>h2 {
 .textop {
     display: block;
     margin: 20px auto;
-    font-size: 15px;
+    font-size: 12px;
     background-color: #000000;
-    width: 70%;
+    width: 90%;
     max-width: 600px;
     color: white;
     padding: 10px;
@@ -104,7 +104,7 @@ main>h2 {
 
 #cidade {
     height: 45px;
-    width: 40vw;
+    width: 50%;
     padding: 10px;
     text-align: center;
     font-family: poppins, Arial, Helvetica, sans-serif;
@@ -133,7 +133,7 @@ main>h2 {
 
 .botao {
     padding: 10px;
-    background-color: #ffffff;
+    background-color: #200000;
     font-family: poppins, Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: rgb(0, 0, 0);
@@ -171,8 +171,7 @@ main>h2 {
     box-shadow: 0px 0px 10px black;
     font-family: poppins, Arial, Helvetica, sans-serif;
     display: none;
-    font-size: 25px;
-    transition: all 1s;
+    font-size: 20px;
 }
 
 .componentes {
@@ -181,14 +180,16 @@ main>h2 {
     color: white;
     text-shadow: 2px 2px 2px black;
     padding: 30px;
-    text-align: center;
-    width: 70%;
-    margin: 30px auto;
+    margin: 20px auto;
     border-radius: 9px;
     box-shadow: 5px 5px 10px black;
     font-family: poppins, Arial, Helvetica, sans-serif;
-    font-size: 0.9em;
-    transition: all 1s;
+    font-size: 20px;
+
+    .comps-inside {
+        margin: auto;
+        text-align: center;
+    }
 }
 
 .nitrogen {
@@ -207,10 +208,6 @@ main>h2 {
     border-radius: 9px;
     box-shadow: 5px 5px 10px black;
     transition: all 1s;
-
-    img {
-        margin-top: -10px;
-    }
 }
 
 .icone {
@@ -271,7 +268,6 @@ main>h2 {
     color: rgb(4, 4, 4);
     padding: 15px 0px;
     font-family: poppins, Arial, Helvetica, sans-serif;
-    font-size: 1.2em;
     border: 2px solid black;
     width: 100%;
 }
@@ -287,6 +283,10 @@ main>h2 {
         right: 100px;
     }
 
+    h3 {
+        font-size: 22px;
+    }
+
 }
 
 .duvida2 {
@@ -294,9 +294,9 @@ main>h2 {
     bottom: 80px;
 
     & h3 {
-        font-size: 21px;
+        font-size: 19px;
         position: relative;
-        top: 40px;
+        top: 50px;
     }
 
     & img {
@@ -313,9 +313,9 @@ main>h2 {
     bottom: 80px;
 
     & h3 {
-        font-size: 21px;
+        font-size: 19px;
         position: relative;
-        top: 65px;
+        top: 70px;
     }
 
     & img {

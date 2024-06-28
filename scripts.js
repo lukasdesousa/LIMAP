@@ -28,14 +28,15 @@ async function buscarCidade(cidade) {
 
     if (resposta.ok) {
         loading.style.display = 'none'
+          document.querySelector('.city').style.display = 'block'
         cidadeCordenada(cidade, dados)
     } else {
         document.querySelector('#resultado').style.display = 'block'
         document.querySelector('#resultado').innerHTML = '<h2>Não foi possível encontrar a cidade :(<br><br> Tente procurar em inglês, exemp: Japan, ou procure por outra cidade.</h2>'
-        document.querySelector('.componentes').style.display = 'none'
-        document.querySelector('#imagens').innerHTML = '<img src="https://cdn-icons-png.flaticon.com/128/2665/2665044.png" alt="Emojis">'
-        loading.style.display = 'none'
         document.querySelector('.city').style.display = 'none'
+        document.querySelector('.componentes').style.display = 'none'
+        document.querySelector('#imagens').innerHTML = '<img src="https://cdn-icons-png.flaticon.com/128/2665/2665044.png" alt="Emojis"><br><br>'
+        loading.style.display = 'none'
     }
 
 }
@@ -63,8 +64,8 @@ function colocarnaTela(poluicao, dados) {
     components.innerHTML = '<h2>COMPONENTES NO AR: </h2><br>' + '<h2>Monóxido de Carbono (CO): </h2>' + '<h2>' + poluicao.list[0].components.co + '</h2>' + '<h3>µg/m³</h3>' + '<br>' + '<h2>Dióxido de Nitrogênio (NO): </h2>' + '<h2>' + poluicao.list[0].components.no + 'µg/m³' + '</h2>' + '<h3>µg/m³</h3>' + '<br>' + '<h2>Amônia (NH3):' + '</h2>' + '<h2>' + poluicao.list[0].components.nh3 + '</h2>' + '<h3>µg/m³</h3><br>' + '<h2>Ozônio (O3): </h2>' + '<h2>' + poluicao.list[0].components.o3 + '</h2>' + '<h3>µg/m³</h3>' + '<br>'
 
 
-    if (poluicao.list[0].main.aqi == 1) {
-        document.querySelector('#resultado').innerHTML = '<h2>Qualidade do ar em </h2>' + '<h2>' + dados.name.toUpperCase() + ', ' + dados.sys.country + '.' + '</h2>' + '<br>' + '<br>' + '<h2>MUITO BOA. </h2>' + '<h2>"AQI (Air Quality Index) de nível 1" </h2>' + "<h2>Não há uma quantidade de componentes que possam fazer mal.<br><br>MUITO BOM para grupos sensíveis</h2>"
+    if (poluicao.list[0].main.aqi === 1) {
+        document.querySelector('#resultado').innerHTML = '<h2>Qualidade do ar em </h2>' + '<h2>' + dados.name.toUpperCase() + ', ' + dados.sys.country + '.' + '</h2>' + '<br>' + '<h2>MUITO BOA</h2>' + '<h2>"Air Quality Index de nível 1" </h2>' + "<br>MUITO BOM para grupos sensíveis</h2>"
 
 
         document.querySelector('#resultado').style.display = 'block'
@@ -75,8 +76,8 @@ function colocarnaTela(poluicao, dados) {
         components.style.background = 'yellowgreen'
 
 
-    } else if (poluicao.list[0].main.aqi == 2) {
-        document.querySelector('#resultado').innerHTML = '<h2>Qualidade do ar em </h2>' + '<h2>' + dados.name.toUpperCase() + ', ' + dados.sys.country + '.' + '</h2>' + '<br>' + '<br>' + '<h2>BOA. </h2>' + '<h2>"AQI (Air Quality Index) de nível 2"</h2>' + "<h2>Há uma quantidade de componentes relativamente baixa.<br><br>BOM para grupos sensíveis</h2>"
+    } else if (poluicao.list[0].main.aqi === 2) {
+        document.querySelector('#resultado').innerHTML = '<h2>Qualidade do ar em </h2>' + '<h2>' + dados.name.toUpperCase() + ', ' + dados.sys.country + '.' + '</h2>' + '<br>' + '<h2>BOA</h2>' + '<h2>"Air Quality Index de nível 2"</h2>' + "<br>BOM para grupos sensíveis</h2>"
 
         document.querySelector('#resultado').style.display = 'block'
 
@@ -85,8 +86,8 @@ function colocarnaTela(poluicao, dados) {
         components.style.display = 'block'
         components.style.background = 'green'
 
-    } else if (poluicao.list[0].main.aqi == 3) {
-        document.querySelector('#resultado').innerHTML = '<h2>Qualidade do ar em </h2>' + '<h2>' + dados.name.toUpperCase() + ', ' + dados.sys.country + '.' + '</h2>' + '<br>' + '<br>' + '<h2>MODERADA. </h2>' + '<h2>"AQI (Air Quality Index) de nível 3"</h2>' + "<h2>Há uma pequena quantidade de componentes que possam fazer mal.<br><br>POUCO RUIM para grupos sensíveis</h2>"
+    } else if (poluicao.list[0].main.aqi === 3) {
+        document.querySelector('#resultado').innerHTML = '<h2>Qualidade do ar em </h2>' + '<h2>' + dados.name.toUpperCase() + ', ' + dados.sys.country + '.' + '</h2>' + '<br>' + '<h2>MODERADA</h2>' + '<h2>"Air Quality Index de nível 3"</h2>' + "<h2>POUCO RUIM para grupos sensíveis</h2>"
 
         document.querySelector('#resultado').style.display = 'block'
         document.querySelector('#imagens').innerHTML = '<img src="https://cdn-icons-png.flaticon.com/128/166/166527.png" alt="Emojis">'
@@ -94,8 +95,8 @@ function colocarnaTela(poluicao, dados) {
         components.style.display = 'block'
         components.style.background = 'yellow'
 
-    } else if (poluicao.list[0].main.aqi == 4) {
-        document.querySelector('#resultado').innerHTML = '<h2>Qualidade do ar em </h2>' + '<h2>' + dados.name.toUpperCase() + ', ' + dados.sys.country + '.' + '</h2>' + '<br>' + '<br>' + '<h2>RUIM. </h2>' + '<h2>"AQI (Air Quality Index) de nível 4"</h2>' + "<h2>Há componentes com quantidades elevadas que possam fazer mal.<br><br>RUIM para grupos sensíveis</h2>"
+    } else if (poluicao.list[0].main.aqi === 4) {
+        document.querySelector('#resultado').innerHTML = '<h2>Qualidade do ar em </h2>' + '<h2>' + dados.name.toUpperCase() + ', ' + dados.sys.country + '.' + '</h2>' + '<br>' + '<h2>RUIM. </h2>' + '<h2>"AQI (Air Quality Index) de nível 4"</h2>' + "<h2>Há componentes com quantidades elevadas que possam fazer mal.<br><br>RUIM para grupos sensíveis</h2>"
 
         document.querySelector('#resultado').style.display = 'block'
 
@@ -104,8 +105,8 @@ function colocarnaTela(poluicao, dados) {
         components.style.display = 'block'
         components.style.background = 'orange'
 
-    } else if (poluicao.list[0].main.aqi == 5) {
-        document.querySelector('#resultado').innerHTML = '<h2>Qualidade do ar em </h2>' + '<h2>' + dados.name.toUpperCase() + ', ' + dados.sys.country + '.' + '</h2>' + '<br>' + '<br>' + '<h2>MUITO RUIM. </h2>' + '<h2>"AQI (Air Quality Index) de nível 5"</h2>' + "<h2>Há componentes com quantidades muito elevadas.<br><br>MUITO RUIM para grupos sensíveis</h2>"
+    } else if (poluicao.list[0].main.aqi === 5) {
+        document.querySelector('#resultado').innerHTML = '<h2>Qualidade do ar em </h2>' + '<h2>' + dados.name.toUpperCase() + ', ' + dados.sys.country + '.' + '</h2>' + '<br>' + '<h2>MUITO RUIM</h2>' + '<h2>"Air Quality Index de nível 5"</h2>' + "<h2>MUITO RUIM para grupos sensíveis</h2>"
 
         document.querySelector('#imagens').innerHTML = '<img src="https://cdn-icons-png.flaticon.com/128/11269/11269963.png" alt="Emojis">'
 
@@ -127,7 +128,7 @@ function tempo(dados) {
 
     document.querySelector('.temperatura').innerHTML = Math.floor(dados.main.temp) + 'ºC' + '<br>' + '<br>'
 
-    document.querySelector('.umidade').innerHTML = 'Umidade de ' + dados.main.humidity + '%' + '<br>'
+    document.querySelector('.umidade').innerHTML = 'Umidade de ' + dados.main.humidity + '%' + '<br><br>'
     
 
     document.querySelector('.icone').src = 'https://cdn-icons-png.flaticon.com/128/5903/5903939.png'
