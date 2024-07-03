@@ -61,7 +61,7 @@ async function pol(cidadeCord, dados) {
 
 function colocarnaTela(poluicao, dados) {
     let components = document.querySelector('.componentes')
-    components.innerHTML = '<h2>COMPONENTES NO AR: </h2><br>' + '<h2>Monóxido de Carbono (CO): </h2>' + '<h2>' + poluicao.list[0].components.co + '</h2>' + '<h3>µg/m³</h3>' + '<br>' + '<h2>Dióxido de Nitrogênio (NO): </h2>' + '<h2>' + poluicao.list[0].components.no + 'µg/m³' + '</h2>' + '<h3>µg/m³</h3>' + '<br>' + '<h2>Amônia (NH3):' + '</h2>' + '<h2>' + poluicao.list[0].components.nh3 + '</h2>' + '<h3>µg/m³</h3><br>' + '<h2>Ozônio (O3): </h2>' + '<h2>' + poluicao.list[0].components.o3 + '</h2>' + '<h3>µg/m³</h3>' + '<br>'
+    components.innerHTML = '<h2>Monóxido de Carbono (CO): </h2>' + '<h2>' + poluicao.list[0].components.co + '</h2>' + '<h3>µg/m³</h3>' + '<br>' + '<h2>Dióxido de Nitrogênio (NO): </h2>' + '<h2>' + poluicao.list[0].components.no + 'µg/m³' + '</h2>' + '<h3>µg/m³</h3>' + '<br>' + '<h2>Amônia (NH3):' + '</h2>' + '<h2>' + poluicao.list[0].components.nh3 + '</h2>' + '<h3>µg/m³</h3><br>' + '<h2>Ozônio (O3): </h2>' + '<h2>' + poluicao.list[0].components.o3 + '</h2>' + '<h3>µg/m³</h3>'
 
 
     if (poluicao.list[0].main.aqi === 1) {

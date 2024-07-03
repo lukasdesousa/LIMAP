@@ -177,9 +177,8 @@ main>h2 {
 
 .componentes {
     display: block;
-    background-color: rgb(215, 140, 1);
-    color: white;
-    text-shadow: 2px 2px 2px black;
+    background-color: #E9ECEF;
+    color: rgb(0, 0, 0);
     padding: 30px;
     text-align: center;
     width: 80%;
@@ -198,7 +197,7 @@ main>h2 {
 
 .city {
     display: block;
-    background-color: #d7edff;
+    background-color: #E9ECEF;
     color: rgb(0, 0, 0);
     padding: 30px;
     text-align: center;
